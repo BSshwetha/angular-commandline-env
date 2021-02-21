@@ -8,7 +8,7 @@ const ngArgs = parseNgArgs();
 
 const argv = { ...DEFAULT_APP_ENV, ...yargs.argv};
 
-const childProcess = spawn('yarn', ['start', ...ngArgs], {
+const childProcess = spawn('yarn', ['build', ...ngArgs], {
   stdio: 'inherit',
   env: { ...process.env, APP_ENV: JSON.stringify(argv) },
   shell: true,
